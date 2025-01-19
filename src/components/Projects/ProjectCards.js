@@ -9,19 +9,37 @@ function ProjectCards(props) {
         <Card className="project-card-view">
             <Card.Img className="card-img" variant="top" src={props.imgPath} alt="card-img" />
             <Card.Body>
-                <Card.Title>{props.title}</Card.Title>
-                <Card.Text style={{ textAlign: "justify" }}>
-                    {props.description}
-                </Card.Text>
-                <Button variant="primary" href={props.ghLink} target="_blank">
+                <div>
+                    <Card.Title>{props.title}</Card.Title>
+                    <Card.Text style={{ textAlign: "justify" }}>
+                        <span>{props.description}</span>
+                    </Card.Text>
+                </div>
+                <div className="tech-stack">
+                    <h5 className="stack-heading" style={{ textAlign: "justify", color: "white" }}>Tech Stack:</h5>
+                    <div className="tech-icons">
+                        {props.techStack?.map((icon, index) => (
+                            <span key={index} className="tech-icon">{icon}</span>
+                        ))}
+                    </div>
+                </div>
+                <div className="tool-stack">
+                    <h5 className="stack-heading" style={{ textAlign: "justify", color: "white" }}>Tool Stack:</h5>
+                    <div className="tool-icons">
+                        {props.toolStack?.map((icon, index) => (
+                            <span key={index} className="tool-icon">{icon}</span>
+                        ))}
+                    </div>
+                </div>
+            </Card.Body>
+            <Card.Footer>
+                <Button
+                    variant="primary"
+                    href={props.ghLink}
+                    target="_blank">
                     <BsGithub /> &nbsp;
                     {props.isBlog ? "Blog" : "GitHub"}
                 </Button>
-                {"\n"}
-                {"\n"}
-
-                {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
-
                 {!props.isBlog && props.demoLink && (
                     <Button
                         variant="primary"
@@ -33,8 +51,7 @@ function ProjectCards(props) {
                         {"Demo"}
                     </Button>
                 )}
-            </Card.Body>
-        </Card>
+            </Card.Footer>
+        </Card >
     );
-}
-export default ProjectCards;
+} export default ProjectCards;

@@ -410,6 +410,7 @@ button:focus {
 /* --------- */
 /* Footer */
 /* --------- */
+
 .footer {
   background-color: rgb(10, 4, 22);
   bottom: 0 !important;
@@ -453,6 +454,7 @@ button:focus {
 /* --------- */
 /* Projects */
 /* --------- */
+
 .project-section {
   position: relative !important;
   padding-top: 150px !important;
@@ -475,20 +477,15 @@ button:focus {
   opacity: 0.9 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
 }
 .project-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
   box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
 }
-
-.card-img-top {
-  padding: 20px !important;
-  opacity: 0.8 !important;
-  border-radius: 10px !important;
-}
-
-
 
 .btn-primary {
   color: #fff !important;
@@ -513,32 +510,32 @@ button:focus {
   padding-bottom: 20px;
 }
 
-.project-description {
-  max-height: 200px;
-  overflow: hidden;
+.card-text  {
   position: relative;
-}
-
-.project-description p {
-  max-height: 200px;
+  max-height: 150px;
   overflow-y: scroll;
-  padding-right: 20px;
   margin: 0;
   text-align: justify;
   text-indent: 20px;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
 }
 
-.project-description::-webkit-scrollbar {
+.card-text::-webkit-scrollbar {
   width: 0;
-}
-
-.project-description {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  display: none;
 }
 
 .card-img {
-  height: 250px;
+  height: 100%;
+  width: 80% !important;
+  margin: 0 auto;
+  margin-top: 20px;
+  box-shadow: 0 4px 5px 3px rgba(129, 125, 130, 0.459) !important;
+}
+
+.tool-icon {
+  height: 50px;
   width: auto;
 }
 
@@ -554,33 +551,51 @@ button:focus {
   color: white !important;
 }
 
-.tech-icons {
-  width: 100px;
-  height: 100px;
+.about-card {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+  height: auto !important;
+}
+
+.tech-stack, .tool-stack {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 15px;
-  padding: 10px;
-  opacity: 0.93 !important;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.tech-icons, .tool-icons {
+  width: max-content;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
   border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
   border-radius: 5px !important;
   box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
+  margin: 10px 0;
 }
 
-.tech-icons:hover {
-  transform: scale(1.1); /* Enlarges the box on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adds a larger shadow */
+.tech-icons:hover, .tool-icons:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.tech-icons svg {
-  width: 50px; /* Adjust icon size */
+.tech-icons svg, .tool-icons svg {
+  width: 50px;
   height: 50px;
-  color: rgb(246, 233, 233); /* You can change the color of the icons here */
+  color: rgb(246, 233, 233);
 }
 
+.tech-icon, .tool-icon {
+  margin: 0 10px;
+}
 
 @media (max-width: 767px) {
   .tech-icons {
