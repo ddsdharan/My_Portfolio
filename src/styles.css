@@ -480,6 +480,7 @@ button:focus {
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
+  justify-items: center !important;
 }
 .project-card-view:hover {
   transform: scale(1.02) !important;
@@ -569,7 +570,7 @@ button:focus {
 
 .tech-icons, .tool-icons {
   width: max-content;
-  height: 80px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -579,7 +580,10 @@ button:focus {
   box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
-  margin: 10px 0;
+}
+
+.tech-icon, .tool-icon {
+  margin: 5px;
 }
 
 .tech-icons:hover, .tool-icons:hover {
@@ -591,16 +595,6 @@ button:focus {
   width: 50px;
   height: 50px;
   color: rgb(246, 233, 233);
-}
-
-.tech-icon, .tool-icon {
-  margin: 0 10px;
-}
-
-@media (max-width: 767px) {
-  .tech-icons {
-    margin: 10px !important;
-  }
 }
 
 .tech-icons:hover {
@@ -646,15 +640,25 @@ button:focus {
   .tech-stack, .tool-stack {
     flex-direction: column;
     align-items: center;
+    height: auto;
+    width: auto;
   }
 
   .tech-icons, .tool-icons {
     flex-wrap: wrap;
     justify-content: center;
+    height: auto;
+    width: auto;
   }
 
   .tech-icon, .tool-icon {
     margin: 5px;
+  }
+
+  .tech-icons svg, .tool-icons svg {
+    width: 30px;
+    height: 30px important !;
+    color: rgb(246, 233, 233);
   }
 }
 
