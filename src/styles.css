@@ -575,7 +575,7 @@ button:focus {
   justify-content: center;
   align-items: center;
   padding: 5px;
-  border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
+  border: 1.7px solid rgba(218, 209, 222, 0.637) !important;
   border-radius: 5px !important;
   box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
   overflow: hidden !important;
@@ -589,7 +589,7 @@ button:focus {
 .tech-icons:hover, .tool-icons:hover {
   transform: scale(1.1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
+  }
 
 .tech-icons svg, .tool-icons svg {
   width: 50px;
@@ -597,8 +597,8 @@ button:focus {
   color: rgb(246, 233, 233);
 }
 
-.tech-icons:hover {
-  transform: scale(1.05) !important;
+.tech-icons:hover, .tool-icons:hover {
+  transform: scale(1.1) !important;
   overflow: hidden !important;
   border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
 }
@@ -642,6 +642,8 @@ button:focus {
     align-items: center;
     height: auto;
     width: auto;
+    overflow: scroll;
+    overflow-x: hidden;
   }
 
   .tech-icons, .tool-icons {
@@ -668,18 +670,17 @@ button:focus {
 /* --------- */
 
 .resume-section {
-  padding-top: 100px !important;
+  position: relative !important;
+  padding-top: 110px !important;
   padding-bottom: 30px !important;
-  background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
+  background-image: var(--section-background-color) !important;
   color: white !important;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .resume {
   padding-top: 50px;
+  padding-bottom: 50px;
+  justify-content: center;
 }
 
 .resume-left {
@@ -688,8 +689,6 @@ button:focus {
 
 .resume-right {
   padding-left: 80px !important;
-  border-radius: 30px;
-  border: solid #0c0513 5px;
 }
 
 @media (max-width: 767px) {
@@ -702,15 +701,6 @@ button:focus {
     padding-right: 15px !important;
     padding-left: 15px !important;
   }
-
-  .footer {
-    padding: 10px;
-  }
-  
-  .resume-section {
-    padding-bottom: 0;
-  }
-
 }
 .resume .resume-title {
   font-size: 2em;
@@ -761,4 +751,3 @@ button:focus {
   background: #fff;
   border: 2px solid #8a49a8;
 }
-

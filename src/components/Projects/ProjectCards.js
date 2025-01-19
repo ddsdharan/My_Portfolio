@@ -16,7 +16,7 @@ function ProjectCards(props) {
                     </Card.Text>
                 </div>
                 <div className="tech-stack">
-                    <h5 className="stack-heading" style={{ textAlign: "justify", color: "white" }}>Tech Stack:</h5>
+                    <h5 className="stack-heading" style={{ textAlign: "justify", color: "grey" }}>Tech Stack:</h5>
                     <div className="tech-icons">
                         {props.techStack?.map((icon, index) => (
                             <span key={index} className="tech-icon">{icon}</span>
@@ -24,7 +24,7 @@ function ProjectCards(props) {
                     </div>
                 </div>
                 <div className="tool-stack">
-                    <h5 className="stack-heading" style={{ textAlign: "justify", color: "white" }}>Tool Stack:</h5>
+                    <h5 className="stack-heading" style={{ textAlign: "justify", color: "grey" }}>Tool Stack:</h5>
                     <div className="tool-icons">
                         {props.toolStack?.map((icon, index) => (
                             <span key={index} className="tool-icon">{icon}</span>
