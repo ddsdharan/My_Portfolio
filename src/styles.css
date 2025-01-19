@@ -629,7 +629,36 @@ button:focus {
   .about-img {
     padding-top: 0 !important;
   }
+
+  .about-card {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    height: auto !important;
+  }
+
+  .about-activity {
+    text-align: center !important;
+    padding-left: 0 !important;
+  }
+
+  .tech-stack, .tool-stack {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tech-icons, .tool-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tech-icon, .tool-icon {
+    margin: 5px;
+  }
 }
+
+
 /* --------- */
 /* Resume */
 /* --------- */
