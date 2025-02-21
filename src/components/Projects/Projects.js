@@ -9,10 +9,14 @@ import securereset from "../../Assets/Project/Password-reset_info.png";
 import classConnect from "../../Assets/Project/ClassConnect_info.png";
 import codeQuest from "../../Assets/Project/CodeQuest_info.png";
 import KanbanBoard from "../../Assets/Project/KanbanBoard.png";
+import Eventmgt from "../../Assets/Project/Event-mgt.png";
 import {
     FaReact,
     FaBootstrap
 } from "react-icons/fa";
+
+import { VscVscode } from "react-icons/vsc";
+
 
 import {
     SiTailwindcss,
@@ -36,7 +40,9 @@ import {
     SiNetlify,
     SiRedux,
     SiAjv,
-    SiPostcss
+    SiPostcss,
+    SiJsonwebtokens,
+    SiBootstrap
 } from "react-icons/si";
 
 const techStackCurrencyConverter = [
@@ -49,7 +55,8 @@ const techStackCurrencyConverter = [
 const toolStackCurrencyConverter = [
     <SiApifox key="API" />,
     <SiVercel key="Vercel" />,
-    <SiPostman key="Postman" />
+    <SiPostman key="Postman" />,
+    <VscVscode key="VScode" />
 ];
 
 const techStackLibrary = [
@@ -63,7 +70,8 @@ const techStackLibrary = [
 const toolStackLibrary = [
     <SiApifox key="API" />,
     <SiVercel key="Vercel" />,
-    <SiPostman key="Postman" />
+    <SiPostman key="Postman" />,
+    <VscVscode key="VScode" />
 ];
 
 const techStackWeatherwatch = [
@@ -75,7 +83,8 @@ const techStackWeatherwatch = [
 const toolStackWeatherwatch = [
     <SiApifox key="API" />,
     <SiVercel key="Vercel" />,
-    <SiPostman key="Postman" />
+    <SiPostman key="Postman" />,
+    <VscVscode key="VScode" />
 ];
 
 const techStacksecurereset = [
@@ -94,7 +103,8 @@ const toolStacksecurereset = [
     <SiVercel key="Vercel" />,
     <SiRender key="render" />,
     <SiNodemon key="nodemon" />,
-    <SiPostman key="Postman" />
+    <SiPostman key="Postman" />,
+    <VscVscode key="VScode" />
 ];
 
 const techStackClassConnect = [
@@ -113,7 +123,8 @@ const toolStackClassConnect = [
     <SiRender key="render" />,
     <SiNodemon key="nodemon" />,
     <SiPostman key="Postman" />,
-    <SiNetlify key="Netlify" />
+    <SiNetlify key="Netlify" />,
+    <VscVscode key="VScode" />
 ];
 
 const techStackCodeQuest = [
@@ -128,6 +139,7 @@ const toolStackCodeQuest = [
     <SiNetlify key="Netlify" />,
     <SiNodemon key="nodemon" />,
     <SiPostman key="Postman" />,
+    <VscVscode key="VScode" />
 ];
 
 const techStackkanban = [
@@ -143,7 +155,26 @@ const techStackkanban = [
 
 const toolStackkanban = [
     <SiNetlify key="Netlify" />,
-    <SiPostman key="Postman" />
+    <SiPostman key="Postman" />,
+    <VscVscode key="VScode" />
+];
+
+const techStackevent = [
+    <SiReact key="React" />,
+    <SiBootstrap key="Bootstrap" />,
+    <SiJavascript key="Javascript" />,
+    <SiAxios key="Axios" />,
+    <SiJsonwebtokens key="JWT" />,
+    <SiFormik key="Formik" />,
+    <SiPostcss key="PostCSS" />
+
+
+];
+
+const toolStackevent = [
+    <SiNetlify key="Netlify" />,
+    <SiPostman key="Postman" />,
+    <VscVscode key="VScode" />
 ];
 
 
@@ -286,6 +317,47 @@ function Projects() {
                             demoLink="https://lovely-daifuku-51cf41.netlify.app/"
                             techStack={techStackkanban}
                             toolStack={toolStackkanban}
+                        />
+                    </Col>
+
+                    <Col md={6} className="project-card">
+                        <ProjectCard
+                            imgPath={Eventmgt}
+                            isBlog={false}
+                            title="Event Management Web Application"
+                            description={
+                                <>
+                                    The Event Management Web Application is a full-stack MERN (MongoDB, Express, React, Node.js) project
+                                    designed to simplify the organization and participation of events such as hackathons, codefests, and
+                                    tech meetups. This platform allows administrators to create, manage, and publish events while ensuring
+                                    a seamless user experience for participants.
+                                    <ul><li>User Authentication & Security: <p>The platform is secured with login and registration functionalities,
+                                        ensuring only authenticated users can access event details. It also includes a password reset option for user convenience.</p></li>
+                                        <li>Role-Based Access Control (RBAC): <p>Admin: Can create, modify, and delete events, as well as publish them for user access.</p>
+                                            <p>User: Can view available events, register for participation, and access event details.</p>
+                                        </li>
+                                        <li>Event Creation & Management: <p>Admins can create various events, specifying details such as name, description, date, time, and
+                                            participation rules before publishing them.</p>
+                                        </li>
+                                        <li>
+                                            User-Friendly Interface: <p>Built using React.js, the application offers an intuitive and responsive design for both desktop and
+                                                mobile users.</p>
+                                        </li>
+                                        <li>
+                                            Secure Backend: <p>Node.js and Express.js power the backend, ensuring smooth API interactions and secure data handling.
+                                                MongoDB is used as the database to store user credentials, event details, and registration data.</p>
+                                        </li>
+                                        <>This project provides a structured and efficient way to handle event management while maintaining a secure and scalable architecture.
+                                            It serves as a great solution for institutions, organizations, and event organizers looking to streamline the event
+                                            planning process.
+                                        </>
+                                    </ul>
+                                </>
+                            }
+                            ghLink="https://github.com/ddsdharan/zen-frontend"
+                            demoLink="https://bucolic-lebkuchen-f623d2.netlify.app/"
+                            techStack={techStackevent}
+                            toolStack={toolStackevent}
                         />
                     </Col>
 

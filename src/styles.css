@@ -351,62 +351,6 @@ button:focus {
   color: white !important;
 }
 
-.home-about-social-links {
-  justify-content: center !important;
-  padding-top: 15px !important;
-  display: inline-block !important;
-  position: relative !important;
-  padding-inline-start: 0 !important;
-}
-
-.home-social-icons {
-  position: relative !important;
-  display: inline-block !important;
-  width: 40px !important;
-  height: 40px !important;
-  text-align: center !important;
-  font-size: 1.2em !important;
-  line-height: 2em !important;
-  background: rgba(255, 255, 255, 0.972) !important;
-  border-radius: 50% !important;
-  transition: 0.5s !important;
-}
-
-.home-social-icons::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: #68187a;
-  transition: 0.5s;
-  transform: scale(0.9);
-  z-index: -1;
-}
-
-.home-social-icons:hover::before {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #801f95;
-}
-
-.home-social-icons:hover {
-  color: #87209e;
-  box-shadow: 0 0 5px #87209e;
-  text-shadow: 0 0 2px #87209e;
-}
-
-.social-icons {
-  display: inline-block !important;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.icon-colour {
-  color: #700c86 !important;
-}
-
 /* --------- */
 /* Footer */
 /* --------- */
@@ -417,14 +361,28 @@ button:focus {
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
 }
+
 .footer-copywright {
   text-align: center !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 .footer-body {
   z-index: 1;
   text-align: center !important;
 }
+
+.footer-icons {
+  list-style: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  /* gap: 2.5em !important; */
+}
+
 
 @media (max-width: 767px) {
   .footer-copywright {
@@ -585,11 +543,6 @@ button:focus {
 .tech-icon, .tool-icon {
   margin: 5px;
 }
-
-.tech-icons:hover, .tool-icons:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  }
 
 .tech-icons svg, .tool-icons svg {
   width: 50px;
